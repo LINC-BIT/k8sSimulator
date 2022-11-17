@@ -1,0 +1,18 @@
+actions: "enqueue, allocate, backfill"
+tiers:
+- plugins:
+    - name: priority
+    - name: conformance
+    - name: gang
+- plugins:
+    - name: drf
+    - name: predicates
+    - name: nodeorder
+      arguments:
+        leastrequested.weight: 0
+        mostrequested.weight: 0
+        nodeaffinity.weight: 0
+        podaffinity.weight: 0
+        balancedresource.weight: 1
+        tainttoleration.weight: 0
+        imagelocality.weight: 0

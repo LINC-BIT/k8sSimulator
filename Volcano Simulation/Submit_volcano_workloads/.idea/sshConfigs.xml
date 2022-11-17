@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="10.1.114.159" id="d1c91a96-2bf7-4068-af3f-90dc473b581f" port="22" nameFormat="DESCRIPTIVE" username="kubernetes" />
+      <sshConfig authType="PASSWORD" host="10.1.114.161" id="0413f55c-89f3-40ed-8615-b8f3f55a7f7c" port="22" nameFormat="DESCRIPTIVE" username="kubernetes" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="5a727bc4-3c24-4599-805a-6ca6c72c43d4" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="588d159b-1263-4792-956b-fafb18984e20" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="4a804351-1c1f-4df2-8264-c5135c9d2dc0" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="8ec21d34-20d7-4eec-849a-065dc27ca4f1" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="4559e727-8101-4745-8e6a-f4b55d3a0505" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="5f7cb94a-bf0f-4ffb-a2fe-26f9c459df5a" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="b7aaf699-3a8a-49a3-b5ad-c19dcd7ee534" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="b5d6f5b9-f235-4aa5-b0a7-3b921ad43468" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="d86a9004-66cc-45d9-a621-111af7269b2b" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="c23da071-0d6b-45c3-94a7-f5d6dca5bc86" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="68b65eaa-3ca2-417b-9b40-2e60b050865e" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="368dc8bd-b7ee-4307-87ac-ae078e180ffc" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="b4dad0af-e115-4805-9ea7-3b4f10d7356c" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="caaeb108-49af-44d2-9c79-486d1e66c195" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="04c43b69-0a53-4a34-9b84-66eb857878da" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="d128b2c3-86c3-4869-bb82-97c6cef57973" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="6101d767-4ec4-45e9-976f-4b70f37db43f" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="b7a0e8f2-6720-4a08-b4c2-7e1358ce6ad0" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.1.114.166" id="171d4111-1f6c-416e-8f1f-8c09df74f4d0" port="22" customName="10.1.114.161" nameFormat="CUSTOM" />
+    </configs>
+  </component>
+</project>

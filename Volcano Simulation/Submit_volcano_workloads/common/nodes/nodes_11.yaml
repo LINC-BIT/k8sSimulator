@@ -1,0 +1,97 @@
+#和真实情况有相同，使用k8s11-74、k8s12-74和k8s13-74，Ki使用1024
+cluster:
+  - metadata:
+      name: k8s11-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 4
+        memory: 16791502848
+        ephemeral-storage:  18945365592
+        pods: 110
+        nvidia.com/gpu: 1
+      capacity:
+        cpu: 4
+        memory: 16791502848
+        ephemeral-storage:  19942490112
+        pods: 110
+        nvidia.com/gpu: 1
+    calculationSpeed: 1.05
+    minimumSpeed: 0.75
+    slowSpeedThreshold: 0.8
+    ctnCreationTime: 2
+    ctnCreationExtraTime: 2
+    ctnCreationTimeInterval: 2
+  - metadata:
+      name: k8s11-54
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+      taints:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+    status:
+      allocatable:
+        cpu: 8
+        memory: 16685764608
+        pods: 110
+        nvidia.com/gpu: 0
+      capacity:
+        cpu: 8
+        memory: 16790622208
+        pods: 110
+        nvidia.com/gpu: 0
+  - metadata:
+      name: k8s12-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 16
+        memory: 33674989568
+        ephemeral-storage:  18945365592
+        pods: 110
+        nvidia.com/gpu: 0
+      capacity:
+        cpu: 16
+        memory: 33674989568
+        ephemeral-storage:  19942490112
+        pods: 110
+        nvidia.com/gpu: 0
+    calculationSpeed: 1.05
+    ctnCreationTime: 3
+    ctnCreationExtraTime: 0.5
+    ctnCreationTimeInterval: 1
+  - metadata:
+      name: k8s13-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: edge1
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 8
+        memory: 16790601728
+        ephemeral-storage:  17948241072
+        pods: 110
+        nvidia.com/gpu: 0
+      capacity:
+        cpu: 8
+        memory: 16790601728
+        ephemeral-storage:  19942490112
+        pods: 110
+        nvidia.com/gpu: 0
+    calculationSpeed: 1.05
+    ctnCreationTime: 2
+    ctnCreationExtraTime: 0.5
+    ctnCreationTimeInterval: 1

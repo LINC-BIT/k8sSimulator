@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Generaltask-cpp/task-cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generaltask-cpp/task-py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generate_VolcanoConf-2.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generate_VolcanoConf.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/consts.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/global_arguments.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/kube_info" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/read_pod_from_file.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/run_status.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/summarizing" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/AI-workloads/2022-05-01-18-21-28-real.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/AI-workloads/2022-05-01-18-21-28-sim.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/AI-workloads/real-1.yaml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/common/workloads/AI-workloads/sim.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/test_1/sim-1.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/test_2/real-1.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/workloads/test_3/real-1.yaml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/GenerateConf.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/draw_figures.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/generate_conf.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/name_split_1.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/name_split_3.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/draw/realrun-1.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytorchjob-migration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob-migration/__init__.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/.dockerignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/.idea" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/Dockerfile" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/ckpts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/migration.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/mnist_ddp_launch.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/mnist_ddp_mp.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/mnist_dp.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/models" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/prestop.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/run.sh" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/utils.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pytorchjob/yamls" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/upload_workload.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/volcano-real-result/jobs/2022-04-22-23-55-36-default-scheduler/coutJCT.md" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/volcano-real-result/tasks/2022-04-22-23-55-36-default-scheduler/tasksSUM.md" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/workload_tester" charset="UTF-8" />
+    <file url="remoteDeploymentFS://&lt;e57497ec-663f-4e1d-9163-0156f2510aff&gt;/home/kubernetes/gopath/src/volcano.sh/volcano/Makefile" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+actions: "enqueue, allocate, backfill"
+tiers:
+- plugins:
+    - name: priority
+    - name: conformance
+    - name: sla
+      arguments:
+        sla-waiting-time: 10000m
+- plugins:
+    - name: proportion
+    - name: predicates
+    - name: binpack
+    - name: drf

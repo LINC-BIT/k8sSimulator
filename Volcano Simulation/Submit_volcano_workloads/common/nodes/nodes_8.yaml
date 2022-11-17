@@ -1,0 +1,132 @@
+#和真实情况有相同，使用k8s2-54、k8s13-54和k8s13-72
+cluster:
+  - metadata:
+      name: k8s23-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+      taints:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+    status:
+      allocatable:
+        cpu: 16
+        memory: 32Gi
+        nvidia.com/gpu: 0
+        pods: 110
+      capacity:
+        cpu: 16
+        memory: 32Gi
+        nvidia.com/gpu: 0
+        pods: 110
+  - metadata:
+      name: k8s20-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 4
+        memory: 8Gi
+        nvidia.com/gpu: 4
+        pods: 110
+      capacity:
+        cpu: 4
+        memory: 8Gi
+        nvidia.com/gpu: 4
+        pods: 110
+    calculationSpeed: 1.0
+    ctnCreationTime: 6
+    ctnCreationExtraTime: 2.5
+    ctnCreationTimeInterval: 2
+  - metadata:
+      name: k8s21-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 8
+        memory: 16Gi
+        nvidia.com/gpu: 8
+        pods: 110
+      capacity:
+        cpu: 8
+        memory: 16Gi
+        nvidia.com/gpu: 8
+        pods: 110
+    calculationSpeed: 1.0
+    ctnCreationTime: 6
+    ctnCreationExtraTime: 2.5
+    ctnCreationTimeInterval: 2
+  - metadata:
+      name: k8s22-74
+      labels:
+        beta.kubernetes.io/os: simulated
+        linc/nodeType: cloud
+    spec:
+      unschedulable: false
+    status:
+      allocatable:
+        cpu: 16
+        memory: 32Gi
+        nvidia.com/gpu: 16
+        pods: 110
+      capacity:
+        cpu: 16
+        memory: 32Gi
+        nvidia.com/gpu: 16
+        pods: 110
+    calculationSpeed: 1.0
+    ctnCreationTime: 6
+    ctnCreationExtraTime: 2.5
+    ctnCreationTimeInterval: 2
+#  - metadata:
+#      name: k8s7-54
+#      labels:
+#        beta.kubernetes.io/os: simulated
+#        linc/nodeType: edge1
+#    spec:
+#      unschedulable: false
+#    status:
+#      allocatable:
+#        cpu: 8
+#        memory: 16Gi
+#        nvidia.com/gpu: 4
+#        pods: 110
+#      capacity:
+#        cpu: 8
+#        memory: 16Gi
+#        nvidia.com/gpu: 4
+#        pods: 110
+#    calculationSpeed: 0.81
+#    ctnCreationTime: 6
+#    ctnCreationExtraTime: 2
+#    ctnCreationTimeInterval: 2
+#  - metadata:
+#      name: k8s6-54
+#      labels:
+#        beta.kubernetes.io/os: simulated
+#        linc/nodeType: edge1
+#    spec:
+#      unschedulable: false
+#    status:
+#      allocatable:
+#        cpu: 16
+#        memory: 32Gi
+#        nvidia.com/gpu: 8
+#        pods: 110
+#      capacity:
+#        cpu: 16
+#        memory: 32Gi
+#        nvidia.com/gpu: 8
+#        pods: 110
+#    ctnCreationTime: 2
+#    ctnCreationExtraTime: 0.5
+#    ctnCreationTimeInterval: 1

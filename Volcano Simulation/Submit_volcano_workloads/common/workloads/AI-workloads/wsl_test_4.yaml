@@ -1,0 +1,193 @@
+jobs:
+- apiVersion: batch.volcano.sh/v1alpha1
+  kind: Job
+  metadata:
+    labels:
+      sub-time: '1'
+    name: gpu-test-0
+    namespace: default
+  spec:
+    minAvailable: 50
+    policies:
+    - action: CompleteJob
+      event: TaskCompleted
+    schedulerName: volcano
+    tasks:
+    - name: test-gpu
+      policies:
+      - action: CompleteJob
+        event: TaskCompleted
+      replicas: 50
+      template:
+        metadata:
+          labels:
+            app: linc-workload
+            job: gpu-test-0
+            jobTaskNumber: '50'
+            restartTime: '300'
+            restartLimit: '0'
+            terminationTime: '350'
+            terminationLimit: '0'
+        spec:
+          containers:
+          - name: task
+            image: 10.1.114.138:5000/pytorchjob-cifar10:v1.0
+            imagePullPolicy: IfNotPresent
+            command:
+              ["python3", "gpu-test3.py", "--epochs=1"]
+            resources:
+              limits:
+                cpu: '0.11'
+                memory: 200Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+              requests:
+                cpu: '0.1'
+                memory: 100Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+          restartPolicy: OnFailure
+- apiVersion: batch.volcano.sh/v1alpha1
+  kind: Job
+  metadata:
+    labels:
+      sub-time: '550'
+    name: gpu-test-1
+    namespace: default
+  spec:
+    minAvailable: 50
+    policies:
+    - action: CompleteJob
+      event: TaskCompleted
+    schedulerName: volcano
+    tasks:
+    - name: test-gpu
+      policies:
+      - action: CompleteJob
+        event: TaskCompleted
+      replicas: 50
+      template:
+        metadata:
+          labels:
+            app: linc-workload
+            job: gpu-test-1
+            jobTaskNumber: '50'
+            restartTime: '300'
+            restartLimit: '0'
+            terminationTime: '350'
+            terminationLimit: '0'
+        spec:
+          containers:
+          - name: task
+            image: 10.1.114.138:5000/pytorchjob-cifar10:v1.0
+            imagePullPolicy: IfNotPresent
+            command:
+              ["python3", "gpu-test3.py", "--epochs=1"]
+            resources:
+              limits:
+                cpu: '0.11'
+                memory: 200Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+              requests:
+                cpu: '0.1'
+                memory: 100Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+          restartPolicy: OnFailure
+- apiVersion: batch.volcano.sh/v1alpha1
+  kind: Job
+  metadata:
+    labels:
+      sub-time: '1100'
+    name: gpu-test-2
+    namespace: default
+  spec:
+    minAvailable: 50
+    policies:
+    - action: CompleteJob
+      event: TaskCompleted
+    schedulerName: volcano
+    tasks:
+    - name: test-gpu
+      policies:
+      - action: CompleteJob
+        event: TaskCompleted
+      replicas: 50
+      template:
+        metadata:
+          labels:
+            app: linc-workload
+            job: gpu-test-2
+            jobTaskNumber: '50'
+            restartTime: '300'
+            restartLimit: '0'
+            terminationTime: '350'
+            terminationLimit: '0'
+        spec:
+          containers:
+          - name: task
+            image: 10.1.114.138:5000/pytorchjob-cifar10:v1.0
+            imagePullPolicy: IfNotPresent
+            command:
+              ["python3", "gpu-test3.py", "--epochs=1"]
+            resources:
+              limits:
+                cpu: '0.11'
+                memory: 200Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+              requests:
+                cpu: '0.1'
+                memory: 100Mi
+                nvidia.com/gpu: 3
+                #volcano.sh/gpu-memory: 100
+          restartPolicy: OnFailure
+- apiVersion: batch.volcano.sh/v1alpha1
+  kind: Job
+  metadata:
+    labels:
+      sub-time: '1650'
+    name: gpu-test-3
+    namespace: default
+  spec:
+    minAvailable: 11
+    policies:
+    - action: CompleteJob
+      event: TaskCompleted
+    schedulerName: volcano
+    tasks:
+    - name: test-gpu
+      policies:
+      - action: CompleteJob
+        event: TaskCompleted
+      replicas: 11
+      template:
+        metadata:
+          labels:
+            app: linc-workload
+            job: gpu-test-3
+            jobTaskNumber: '11'
+            restartTime: '400'
+            restartLimit: '0'
+            terminationTime: '400'
+            terminationLimit: '1'
+        spec:
+          containers:
+          - name: task
+            image: 10.1.114.138:5000/pytorchjob-cifar10:v1.0
+            imagePullPolicy: IfNotPresent
+            command:
+              ["python3", "gpu-test3.py", "--epochs=25"]
+            resources:
+              limits:
+                cpu: '1.0'
+                memory: 2000Mi
+                nvidia.com/gpu: 10
+                #volcano.sh/gpu-memory: 100
+              requests:
+                cpu: '0.5'
+                memory: 1000Mi
+                nvidia.com/gpu: 10
+                #volcano.sh/gpu-memory: 100
+          restartPolicy: OnFailure
