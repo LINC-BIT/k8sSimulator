@@ -1,4 +1,5 @@
 # K8sSim：A Kubernetes cluster simualtor
+![image]
 # Introduction
 ## 1. Kubernetes Simualtion：responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
 ### 1.1. k8s-simulator-prop：Kubernetes simualtion scheduler
