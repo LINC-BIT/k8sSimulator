@@ -176,7 +176,74 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
 ### 1.2.1 Volcano_simulator：Volcano simualtion scheduler
 * cmd/sim: ***the startup program of Volcano simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. var port = ":8006"**
+  * pkg/scheduler/scheduler.go: function NewScheduler returns a new scheduler, and function loadSchedulerConf loads a new scheduler configuration
+  
+  ```go
+  
+  func NewScheduler(
+	config *rest.Config,
+	schedulerName string,
+	schedulerConf string,
+	period time.Duration,
+	defaultQueue string,
+	nodeSelectors []string,
+   ) (*Scheduler, error) {
+	var watcher filewatcher.FileWatcher
+	if schedulerConf != "" {
+		var err error
+		path := filepath.Dir(schedulerConf)
+		watcher, err = filewatcher.NewFileWatcher(path)
+		if err != nil {
+			return nil, fmt.Errorf("failed creating filewatcher for %s: %v", schedulerConf, err)
+		}
+	}
 
+	scheduler := &Scheduler{
+		schedulerConf:  schedulerConf,
+		fileWatcher:    watcher,
+		cache:          schedcache.New(config, schedulerName, defaultQueue, nodeSelectors),
+		schedulePeriod: period,
+	}
+
+	return scheduler, nil
+   }
+   ```
+   
+   ```go
+   func (pc *Scheduler) loadSchedulerConf() {
+	var err error
+	pc.once.Do(func() {
+		pc.actions, pc.plugins, pc.configurations, err = unmarshalSchedulerConf(defaultSchedulerConf)
+		if err != nil {
+			klog.Errorf("unmarshal scheduler config %s failed: %v", defaultSchedulerConf, err)
+			panic("invalid default configuration")
+		}
+	})
+
+	var config string
+	if len(pc.schedulerConf) != 0 {
+		if config, err = readSchedulerConf(pc.schedulerConf); err != nil {
+			klog.Errorf("Failed to read scheduler configuration '%s', using previous configuration: %v",
+				pc.schedulerConf, err)
+			return
+		}
+	}
+
+	actions, plugins, configurations, err := unmarshalSchedulerConf(config)
+	if err != nil {
+		klog.Errorf("scheduler config %s is invalid: %v", config, err)
+		return
+	}
+
+	pc.mutex.Lock()
+	// If it is valid, use the new configuration
+	pc.actions = actions
+	pc.plugins = plugins
+	pc.configurations = configurations
+	pc.mutex.Unlock()
+   }
+   ```
+     
 ### 1.2.2 Submit_volcano_workloads：Simulation environment
 * common/workloads: some AI workloads to test (user-submitted workloads, e.g. AI-workloads/wsl_test_mrp-2.yaml)
 * common/nodes: some configuration files of node resources (simulation nodes, nodes_7-0.yaml)
