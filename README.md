@@ -45,10 +45,6 @@
 ### 1.2.1 Volcano_simulator：Volcano simualtion scheduler
 * cmd/sim: ***the startup program of Volcano simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. var port = ":8006"**
-  * ***how to start:*** 
-    * ***cd ~/cmd/sim***
-    * ***go bulid***
-    * ***sim.exe (Windows system); ./sim/sim port (Linux system)***
 
 ### 1.2.2 Submit_volcano_workloads：Simulation environment
 * common/workloads: some AI workloads to test (user-submitted workloads, e.g. AI-workloads/wsl_test_mrp-2.yaml)
@@ -61,10 +57,16 @@
   * pods_result_url: the location where the pods' simulation results will be saved
   * jobs_result_url: the location where the jobs' simulation results will be saved
   * figures_result_url: the location where the result figures will be saved
-  * ***how to start:***
-    * ***python3.8 SimRun.py***
 
-# Contact information
+### 1.2.3 Get Started
+* *1. cd Kubernetes Simulation/Volcano_simulator*
+* *2. cd cmd/sim
+* *3. go bulid
+* *4. sim.exe (Windows system); ./sim/sim port (Linux system)
+* *5. cd Kubernetes Simulation/Submit_volcano_workloads
+* *6. python3.8 SimRun.py
+
+# 2. Contact information
 ## Beijing Institute of Technology
 Shilin Wen, Rui Han, Ke Qiu, Xiaoxin Ma, Zeqing Li, Hongjie Deng, and Chi Harold Liu
 ## E-mail
