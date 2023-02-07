@@ -274,7 +274,7 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
   * *5. cd Volcano Simulation/Submit_volcano_workloads*
   * *6. python3.8 SimRun.py*
 
-# 3. 联系方式
+# 3. 作者和电子邮件
 ## 北京理工大学
 文士林, 韩锐, 邱可, 马晓鑫, 李泽清, 邓鸿捷, 刘驰
 ## 电子邮件
