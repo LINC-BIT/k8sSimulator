@@ -1078,7 +1078,7 @@ func server()  {
 	// 处理stepResult请求
 	http.HandleFunc("/stepResultAnyway", stepResultAnyway)
 	// 设置监听端口，等待响应
-	http.ListenAndServe(":8002", nil)
+	http.ListenAndServe(":8006", nil)
 }
 
 
