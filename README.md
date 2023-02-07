@@ -70,12 +70,17 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
   * figures_result_url: the location where the result figures will be saved
 
 ### 1.2.3 Get Started
-* *1. cd Kubernetes Simulation/Volcano_simulator*
-* *2. cd cmd/sim*
-* *3. go bulid*
-* *4. sim.exe (Windows system); ./sim/sim port (Linux system)*
-* *5. cd Kubernetes Simulation/Submit_volcano_workloads*
-* *6. python3.8 SimRun.py*
+* Requirements:
+  * Linux and Windows
+  * Python 3.8
+  * Go 1.17.6
+* How to start:
+  * *1. cd Kubernetes Simulation/Volcano_simulator*
+  * *2. cd cmd/sim*
+  * *3. go bulid*
+  * *4. sim.exe (Windows system); ./sim/sim port (Linux system)*
+  * *5. cd Kubernetes Simulation/Submit_volcano_workloads*
+  * *6. python3.8 SimRun.py*
 
 # 2. Contact information
 ## Beijing Institute of Technology
