@@ -255,7 +255,7 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
   * sim_base_url: 调度模拟器运行的端口(**e.g. 'http://localhost:8006'**)
   * node_file_url: 指定本次测试所用的仿真节点
   * workload_file_url: 指定本次测试负载所在的文件夹位置
-  * schedulers: 指定本次测试中需要进行对比的多种Volcano调度算法(e.g. GANG_BRA, GANG_MRP, GANG_LRP)
+  * schedulers: 指定本次测试中需要进行对比的多种Volcano调度算法的名称(e.g. GANG_BRA, GANG_MRP, GANG_LRP)
   * pods_result_url: 指定Pods仿真执行结果的保存位置
   * jobs_result_url: 指定作业仿真运行结果的保存位置
   * figures_result_url: 指定根据pods和作业仿真执行的结果画图后，图片的保存位置
