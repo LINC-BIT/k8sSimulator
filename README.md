@@ -254,7 +254,7 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
 ### 2.2.2 Submit_volcano_workloads：Simulation environment
 * common/workloads: some AI workloads to test (user-submitted workloads, e.g. AI-workloads/wsl_test_mrp-2.yaml)
   * The generation program for AI workloads:
-  https://github.com/LINC-BIT/EdgeCloudBenchmark/tree/main/normal_bench
+  https://github.com/LINC-BIT/EdgeCloudBenchmark/tree/main/ai_bench
 * common/nodes: some configuration files of node resources (simulation nodes, nodes_7-0.yaml)
 * SimRun.py: ***the startup program used to submit the workload and node configuration*** 
   * sim_base_url: the port on which the simulation scheduler will run (**e.g. 'http://localhost:8006'**)
