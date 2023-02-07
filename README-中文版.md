@@ -8,11 +8,11 @@
     - [2.1 Kubernetes模拟器](#11-kubernetes模拟器)
       - [2.1.1 k8s-simulator-prop](#111-k8s-simulator-prop)
       - [2.1.2 k8s-benchmark](#112-k8s-benchmark)
-      - [2.1.3 部署和使用](#113-部署和使用)
+      - [2.1.3 如何部署和使用](#113-如何部署和使用)
     - [2.2 Volcano模拟器](#12-volcano模拟器)
       - [2.2.1 Volcano_simulator](#121-volcano_simulator)
       - [2.2.2 Submit_volcano_workloads](#122-submit_volcano_workloads)
-      - [2.2.3 部署和使用](#123-部署和使用)
+      - [2.2.3 如何部署和使用](#123-如何部署和使用)
   - [3. 联系方式](#2-联系方式)
   
 # 1. 介绍
@@ -160,7 +160,7 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
   * sim_base_url: 指定调度模拟器运行的端口(**e.g. 'http://localhost:8002'**)
   * result_dir: 指定模拟结果存放的位置
 
-### 2.1.3 部署和使用
+### 2.1.3 如何部署和使用
 * 软件版本:
   * Linux and Windows
   * Python 3.8
@@ -260,7 +260,7 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
   * jobs_result_url: 指定作业仿真运行结果的保存位置
   * figures_result_url: 指定根据pods和作业仿真执行的结果画图后，图片的保存位置
 
-### 2.2.3 部署和使用
+### 2.2.3 如何部署和使用
 * 软件版本:
   * Linux and Windows
   * Python 3.8
