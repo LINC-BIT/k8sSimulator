@@ -24,6 +24,126 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
 ### 1.1.1 k8s-simulator-prop：Kubernetes simualtion scheduler
 * k8s/example: ***the startup program of Kubernetes simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. port = ":8002"**
+  * create_scheduler.go: create a new generic scheduler that mimics a kube-scheduler
+  
+  ```go
+
+  func buildSchedulers() []scheduler.Scheduler {
+
+	// 1. Create a generic scheduler that mimics a kube-scheduler.
+	sched1 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched2 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched3 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched4 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched5 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched6 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched7 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched8 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched9 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched10 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+	sched11 := scheduler.NewGenericScheduler( /* preemption enabled */ true)
+
+	scheds := make([]scheduler.Scheduler, 12, 12)
+	scheds[1] = &sched1
+	scheds[2] = &sched2
+	scheds[3] = &sched3
+	scheds[4] = &sched4
+	scheds[5] = &sched5
+	scheds[6] = &sched6
+	scheds[7] = &sched7
+	scheds[8] = &sched8
+	scheds[9] = &sched9
+	scheds[10] = &sched10
+	scheds[11] = &sched11
+
+	// 2. Register plugin(s)
+	// Predicate
+	sched1.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched2.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched3.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched4.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched5.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched6.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched7.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched8.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched9.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched10.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+	sched11.AddPredicate("GeneralPredicates", predicates.GeneralPredicates)
+
+	sched2.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "LeastRequested",
+		Map:    priorities.LeastRequestedPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched3.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "MostRequested",
+		Map:    priorities.MostRequestedPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched4.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "BalancedResourceAllocation",
+		Map:    priorities.BalancedResourceAllocationMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched5.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "ResourceLimitsPriority",
+		Map:    priorities.ResourceLimitsPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched6.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "TaintTolerationPriority",
+		Map:    priorities.ComputeTaintTolerationPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched7.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "NodeAffinityPriority",
+		Map:    priorities.CalculateNodeAffinityPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched8.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "NodePreferAvoidPodsPriority",
+		Map:    priorities.CalculateNodePreferAvoidPodsPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched9.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "ImageLocalityPriority",
+		Map:    priorities.ImageLocalityPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched10.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "NodeLabelPriority",
+		Map:    new(priorities.NodeLabelPrioritizer).CalculateNodeLabelPriorityMap,
+		Reduce: nil,
+		Weight: 1,
+	})
+
+	sched11.AddPrioritizer(priorities.PriorityConfig{
+		Name:   "InterPodAffinityPriority",
+		Map:    nil,
+		Reduce: nil,
+		Function: new(priorities.InterPodAffinity).CalculateInterPodAffinityPriority,
+		Weight: 1,
+	})
+
+	return scheds
+  }
+  ```
 
 ### 1.1.2 k8s-benchmark：Simulation environment
 * common/test_workloads: some generic workloads to test (user-submitted workloads, e.g. ce/ce-bra.yaml)
