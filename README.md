@@ -21,7 +21,8 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
 
 # 2. K8sSim framework
 
-## 2.1 Kubernetes Simualtion：responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
+## 2.1 Kubernetes Simualtion
+It is responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
 ![image](kubernetes.png)
 
 ### 2.1.1 k8s-simulator-prop：Kubernetes simualtion scheduler
@@ -173,7 +174,8 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
   * *5. cd Kubernetes Simulation/k8s-benchmark*
   * *6. python3.8 run_sim_workload.py*
 
-## 2.2 Volcano Simulation：responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
+## 2.2 Volcano Simulation
+It is responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
 ![image](volcano.png)
 
 ### 2.2.1 Volcano_simulator：Volcano simualtion scheduler
