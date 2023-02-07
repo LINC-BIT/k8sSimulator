@@ -1,27 +1,26 @@
-# K8sSim(A Kubernetes cluster simualtor)
+# K8sSim(一个Kubernetes集群调度模拟器)
 ![image](k8ssim.png)
 
-## Table of contents
+## 目录
 - [K8sSim](#k8ssim)
-  - [Table of contents](#table-of-contents)
-  - [1. Introduction](#1-introduction)
-  - [2. K8sSim framework](#2-k8ssim-framework)
-    - [2.1 Kubernetes Simualtion](#11-kubernetes-simulation)
+  - [1. 介绍](#1-介绍)
+  - [2. K8sSim总体架构](#2-k8ssim总体架构)
+    - [2.1 Kubernetes模拟器](#11-kubernetes模拟器)
       - [2.1.1 k8s-simulator-prop](#111-k8s-simulator-prop)
       - [2.1.2 k8s-benchmark](#112-k8s-benchmark)
       - [2.1.3 Get-started](#113-get-started)
-    - [2.2 Volcano Simulation](#12-volcano-simulation)
+    - [2.2 Volcano模拟器](#12-volcano模拟器)
       - [2.2.1 Volcano_simulator](#121-volcano_simulator)
       - [2.2.2 Submit_volcano_workloads](#122-submit_volcano_workloads)
       - [2.2.3 Get-started](#123-get-started)
-  - [3. Contact information](#2-contact-information)
+  - [3. 联系方式](#2-联系方式)
   
-# 1. Introduction
+# 1. 介绍
 We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes schedulers and its applications in scheduling algorithm optimization. Then we design and implement K8sSim, which incorporates typical Kubernetes and Volcano scheduling algorithms for both generic and AI workloads, and provides an accurate simulation of their scheduling process in real clusters. As a result, K8sSim can not only ensure the accuracy of scheduling results, but also greatly accelerate the scheduling time of different scheduling algorithms in the real cluster. Therefore, our proposed K8sSim can provide a convenient analysis tool and a basis for a series of research works on cluster scheduling optimization.
 
-# 2. K8sSim framework
+# 2. K8sSim总体架构
 
-## 2.1 Kubernetes Simualtion
+## 2.1 Kubernetes模拟器
 It is responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
 ![image](kubernetes.png)
 
@@ -174,7 +173,7 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
   * *5. cd Kubernetes Simulation/k8s-benchmark*
   * *6. python3.8 run_sim_workload.py*
 
-## 2.2 Volcano Simulation
+## 2.2 Volcano模拟器
 It is responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
 ![image](volcano.png)
 
@@ -274,7 +273,7 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
   * *5. cd Volcano Simulation/Submit_volcano_workloads*
   * *6. python3.8 SimRun.py*
 
-# 3. 作者和电子邮件
+# 3. 联系方式
 ## 北京理工大学
 文士林, 韩锐, 邱可, 马晓鑫, 李泽清, 邓鸿捷, 刘驰
 ## 电子邮件
