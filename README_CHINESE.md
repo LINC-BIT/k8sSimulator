@@ -1,5 +1,6 @@
 # K8sSim(一个Kubernetes集群调度模拟器)
-![image](k8ssim.png)
+
+![image](background.png)
 
 ## 目录
 - [K8sSim](#k8ssim)
@@ -19,6 +20,8 @@
 K8sSim，是一种用于Kubernetes集群调度及其在调度算法优化方面的的仿真工具。该模拟器结合了通用负载和AI工作负载的典型Kubernetes调度算法和Volcano调度算法，并在实际集群中提供了对运行job和task调度过程的准确模拟。它具有两个优点：（1）可以确保调度结果的准确性；（2）还可以大大加速实际群集中不同调度算法的调度运行时间。 因此，K8sSim可以为一系列有关集群计划优化的研究工作在分析过程中提供方便。
 
 # 2. K8sSim总体架构
+
+![image](k8ssim.png)
 
 ## 2.1 Kubernetes模拟器
 该模拟器负责在Kubernetes模拟器中执行通用负载(对于一个通用工作负载来说，作业中的任务是按照时间的先后顺序提交的)
