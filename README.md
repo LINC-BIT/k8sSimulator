@@ -34,12 +34,12 @@
   * result_dir: the location where the simulation results will be saved
 
 ### 1.1.3 Get Started
-* ***1. cd Kubernetes Simulation/k8s-simulator-prop***
-* ***2. cd k8s/example***
-* ***3. go bulid***
-* ***4. example.exe (Windows system); ./example/example port (Linux system)***
-* ***5. cd Kubernetes Simulation/k8s-benchmark***
-* ***6. python3.8 run_sim_workload.py***
+* 1. cd Kubernetes Simulation/k8s-simulator-prop
+* 2. cd k8s/example
+* 3. go bulid
+* 4. example.exe (Windows system); ./example/example port (Linux system)
+* 5. cd Kubernetes Simulation/k8s-benchmark
+* 6. python3.8 run_sim_workload.py
 
 ## 1.2 Volcano Simulation：responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
 ### 1.2.1 Volcano_simulator：Volcano simualtion scheduler
