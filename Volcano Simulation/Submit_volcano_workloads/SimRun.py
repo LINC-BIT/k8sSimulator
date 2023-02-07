@@ -251,7 +251,7 @@ def step(sim_base_url, conf_file_url, pods_result_url, jobs_result_url, figures_
 
 if __name__ == '__main__':
 
-    sim_base_url = 'http://localhost:8002'
+    sim_base_url = 'http://localhost:8006'
     node_file_url = 'common/nodes/nodes_7-0.yaml'
     workload_file_url = 'common/workloads/AI-workloads/wsl_test_mrp-2.yaml'
 
