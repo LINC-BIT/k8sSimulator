@@ -1,5 +1,4 @@
 # K8sSim(A Kubernetes cluster simualtor)
-* Chinese Version: https://github.com/LINC-BIT/k8sSimulator/blob/master/README_CHINESE.md
 ![image](k8ssim.png)
 
 ## Table of contents
@@ -7,15 +6,16 @@
   - [Table of contents](#table-of-contents)
   - [1. Introduction](#1-introduction)
   - [2. K8sSim framework](#2-k8ssim-framework)
-    - [2.1 Kubernetes Simualtion](#11-kubernetes-simulation)
-      - [2.1.1 k8s-simulator-prop](#111-k8s-simulator-prop)
-      - [2.1.2 k8s-benchmark](#112-k8s-benchmark)
-      - [2.1.3 Get-started](#113-get-started)
-    - [2.2 Volcano Simulation](#12-volcano-simulation)
-      - [2.2.1 Volcano_simulator](#121-volcano_simulator)
-      - [2.2.2 Submit_volcano_workloads](#122-submit_volcano_workloads)
-      - [2.2.3 Get-started](#123-get-started)
-  - [3. Contact information](#2-contact-information)
+    - [2.1 Kubernetes Simualtion](#21-kubernetes-simulation)
+      - [2.1.1 k8s-simulator-prop](#211-k8s-simulator-prop)
+      - [2.1.2 k8s-benchmark](#212-k8s-benchmark)
+      - [2.1.3 Get-started](#213-get-started)
+    - [2.2 Volcano Simulation](#22-volcano-simulation)
+      - [2.2.1 Volcano_simulator](#221-volcano_simulator)
+      - [2.2.2 Submit_volcano_workloads](#222-submit_volcano_workloads)
+      - [2.2.3 Get-started](#223-get-started)
+  - [3. Contact information](#3-contact-information)
+  - [4. Chinese version](#4-chinese-version)
   
 # 1. Introduction
 We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes schedulers and its applications in scheduling algorithm optimization. Then we design and implement K8sSim, which incorporates typical Kubernetes and Volcano scheduling algorithms for both generic and AI workloads, and provides an accurate simulation of their scheduling process in real clusters. As a result, K8sSim can not only ensure the accuracy of scheduling results, but also greatly accelerate the scheduling time of different scheduling algorithms in the real cluster. Therefore, our proposed K8sSim can provide a convenient analysis tool and a basis for a series of research works on cluster scheduling optimization.
@@ -282,8 +282,8 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
 # 3. Contact information
 ## Beijing Institute of Technology
 Shilin Wen, Rui Han, Ke Qiu, Xiaoxin Ma, Zeqing Li, Hongjie Deng, and Chi Harold Liu
-## E-mail
-Shilin Wen: 3120185530@bit.edu.cn
-## Version
-This project version is K8sSim v1.0.
+## E-mail and Version
+Shilin Wen: 3120185530@bit.edu.cn. This current project version is K8sSim v1.0.
 
+# 4. Chinese version
+https://github.com/LINC-BIT/k8sSimulator/blob/master/README_CHINESE.md
