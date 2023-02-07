@@ -1,5 +1,5 @@
 # K8sSim(A Kubernetes cluster simualtor)
-## 中文版本: https://github.com/LINC-BIT/k8sSimulator/blob/master/README-CHINESE.md
+* 中文版本: https://github.com/LINC-BIT/k8sSimulator/blob/master/README-CHINESE.md
 ![image](k8ssim.png)
 
 ## Table of contents
