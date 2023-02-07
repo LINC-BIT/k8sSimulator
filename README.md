@@ -39,6 +39,12 @@
   * ***how to start:***
     * ***python3.8 run_sim_workload.py***
 
+### 1.1.3 Get Started
+* ***1. cd k8s-simulator-prop***
+* ***2. cd k8s/example***
+* ***3. go bulid***
+* ***4. example.exe (Windows system); ./example/example port (Linux system)***
+
 ## 1.2 Volcano Simulation：responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
 ### 1.2.1 Volcano_simulator：Volcano simualtion scheduler
 * cmd/sim: ***the startup program of Volcano simualtion scheduler*** 
