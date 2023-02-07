@@ -20,10 +20,6 @@
 ### 1.1.1 k8s-simulator-prop：Kubernetes simualtion scheduler
 * k8s/example: ***the startup program of Kubernetes simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. port = ":8002"**
-  * ***how to start:*** 
-    * ***cd ~/k8s/example***
-    * ***go bulid***
-    * ***example.exe (Windows system); ./example/example port (Linux system)***
 
 ### 1.1.2 k8s-benchmark：Simulation environment
 * common/test_workloads: some generic workloads to test (user-submitted workloads, e.g. ce/ce-bra.yaml)
@@ -36,8 +32,6 @@
   * repeat_times: number of repeated runs
   * sim_base_url: the port on which the simulation scheduler will run (**e.g. 'http://localhost:8002'**)
   * result_dir: the location where the simulation results will be saved
-  * ***how to start:***
-    * ***python3.8 run_sim_workload.py***
 
 ### 1.1.3 Get Started
 * ***1. cd Kubernetes Simulation/k8s-simulator-prop***
