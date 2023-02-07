@@ -21,13 +21,13 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
 # 2. K8sSim总体架构
 
 ## 2.1 Kubernetes模拟器
-It is responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
+该模拟器负责在Kubernetes模拟器中执行通用负载(对于一个通用工作负载来说，作业中的任务是按照时间的先后顺序提交的)
 ![image](kubernetes.png)
 
-### 2.1.1 k8s-simulator-prop：Kubernetes simualtion scheduler
-* k8s/example: ***the startup program of Kubernetes simualtion scheduler*** 
-  * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. port = ":8002"**
-  * create_scheduler.go: create a new generic scheduler that mimics a kube-scheduler
+### 2.1.1 k8s-simulator-prop：Kubernetes模拟调度器
+* k8s/example: ***模拟调度器的启动程序*** 
+  * conf.go: 模拟调度器运行的端口, **e.g. port = ":8002"**
+  * create_scheduler.go: 创建一个新的通用调度器，以模仿Kube-Scheduler
   
   ```go
 
@@ -148,7 +148,7 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
   }
   ```
 
-### 2.1.2 k8s-benchmark：仿真环境
+### 2.1.2 k8s-benchmark：通用负载测试的仿真环境
 * common/test_workloads: 一些测试所用的通用负载(即用户提交的负载, e.g. ce/ce-bra.yaml)
 * common/nodes: 与真实集群中节点资源保持一致的模拟节点配置文件 (即仿真节点, c2e2.yaml)
 * common/summarizing: 一些对jobs和pods模拟调度的结果进行格式化的代码，以便于后续分析和使用
@@ -248,7 +248,7 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
    }
    ```
      
-### 2.2.2 Submit_volcano_workloads：测试的仿真环境
+### 2.2.2 Submit_volcano_workloads：AI负载测试的仿真环境
 * common/workloads: 用来测试的一些AI负载(即用户提交的负载, e.g. AI-workloads/wsl_test_mrp-2.yaml)
 * common/nodes: 与真实集群中节点资源保持一致的模拟节点配置文件(即仿真节点，nodes_7-0.yaml)
 * SimRun.py: ***用来提交测试负载和模拟节点配置文件的启动程序*** 
