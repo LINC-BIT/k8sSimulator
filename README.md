@@ -19,6 +19,8 @@
 We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes schedulers and its applications in scheduling algorithm optimization. Then we design and implement K8sSim, which incorporates typical Kubernetes and Volcano scheduling algorithms for both generic and AI workloads, and provides an accurate simulation of their scheduling process in real clusters. As a result, K8sSim can not only ensure the accuracy of scheduling results, but also greatly accelerate the scheduling time of different scheduling algorithms in the real cluster. Therefore, our proposed K8sSim can provide a convenient analysis tool and a basis for a series of research works on cluster scheduling optimization.
 
 ## 1.1 Kubernetes Simualtion：responsible for the scheduling of ***generic workloads*** in Kubernetes simulation scheduler (For a generic workload, tasks in a job are submitted to excute sequentially)
+![image](kubernetes.png)
+
 ### 1.1.1 k8s-simulator-prop：Kubernetes simualtion scheduler
 * k8s/example: ***the startup program of Kubernetes simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. port = ":8002"**
@@ -44,6 +46,8 @@ We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes s
 * *6. python3.8 run_sim_workload.py*
 
 ## 1.2 Volcano Simulation：responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
+![image](volcano.png)
+
 ### 1.2.1 Volcano_simulator：Volcano simualtion scheduler
 * cmd/sim: ***the startup program of Volcano simualtion scheduler*** 
   * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. var port = ":8006"**
