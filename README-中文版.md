@@ -8,11 +8,11 @@
     - [2.1 Kubernetes模拟器](#11-kubernetes模拟器)
       - [2.1.1 k8s-simulator-prop](#111-k8s-simulator-prop)
       - [2.1.2 k8s-benchmark](#112-k8s-benchmark)
-      - [2.1.3 Get-started](#113-get-started)
+      - [2.1.3 部署和使用](#113-部署和使用)
     - [2.2 Volcano模拟器](#12-volcano模拟器)
       - [2.2.1 Volcano_simulator](#121-volcano_simulator)
       - [2.2.2 Submit_volcano_workloads](#122-submit_volcano_workloads)
-      - [2.2.3 Get-started](#123-get-started)
+      - [2.2.3 部署和使用](#123-部署和使用)
   - [3. 联系方式](#2-联系方式)
   
 # 1. 介绍
@@ -160,12 +160,12 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
   * sim_base_url: the port on which the simulation scheduler will run (**e.g. 'http://localhost:8002'**)
   * result_dir: the location where the simulation results will be saved
 
-### 2.1.3 Get Started
-* Requirements:
+### 2.1.3 部署和使用
+* 软件版本:
   * Linux and Windows
   * Python 3.8
   * Go 1.14.13
-* How to start:
+* 执行步骤:
   * *1. cd Kubernetes Simulation/k8s-simulator-prop*
   * *2. cd k8s/example*
   * *3. go bulid*
@@ -248,24 +248,24 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
    }
    ```
      
-### 2.2.2 Submit_volcano_workloads：Simulation environment
-* common/workloads: some AI workloads to test (user-submitted workloads, e.g. AI-workloads/wsl_test_mrp-2.yaml)
-* common/nodes: some configuration files of node resources (simulation nodes, nodes_7-0.yaml)
-* SimRun.py: ***the startup program used to submit the workload and node configuration*** 
-  * sim_base_url: the port on which the simulation scheduler will run (**e.g. 'http://localhost:8006'**)
-  * node_file_url: specifying the simulation nodes for this test
-  * workload_file_url: specifying the folder where the test workload is located
-  * schedulers: specifying the names of the multiple Volcano scheduling algorithms to be run (e.g. GANG_BRA, GANG_MRP, GANG_LRP)
-  * pods_result_url: the location where the pods' simulation results will be saved
-  * jobs_result_url: the location where the jobs' simulation results will be saved
-  * figures_result_url: the location where the result figures will be saved
+### 2.2.2 Submit_volcano_workloads：测试的仿真环境
+* common/workloads: 用来测试的一些AI负载(即用户提交的负载, e.g. AI-workloads/wsl_test_mrp-2.yaml)
+* common/nodes: 与真实集群中节点资源保持一致的模拟节点配置文件(即仿真节点，nodes_7-0.yaml)
+* SimRun.py: ***用来提交测试负载和模拟节点配置文件的开始程序*** 
+  * sim_base_url: 调度模拟器运行的端口(**e.g. 'http://localhost:8006'**)
+  * node_file_url: 指定本次测试所用的仿真节点
+  * workload_file_url: 指定本次测试负载所在的文件夹位置
+  * schedulers: 指定本次测试中需要进行对比的多种Volcano调度算法(e.g. GANG_BRA, GANG_MRP, GANG_LRP)
+  * pods_result_url: 指定Pods仿真执行结果的保存位置
+  * jobs_result_url: 指定作业仿真运行结果的保存位置
+  * figures_result_url: 指定根据pods和作业仿真执行的结果画图后，图片的保存位置
 
-### 2.2.3 Get Started
-* Requirements:
+### 2.2.3 部署和使用
+* 软件版本:
   * Linux and Windows
   * Python 3.8
   * Go 1.17.6
-* How to start:
+* 执行步骤:
   * *1. cd Volcano Simulation/Volcano_simulator*
   * *2. cd cmd/sim*
   * *3. go bulid*
