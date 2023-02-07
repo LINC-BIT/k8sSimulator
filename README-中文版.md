@@ -16,7 +16,7 @@
   - [3. 联系方式](#2-联系方式)
   
 # 1. 介绍
-We propose a cluster simulator called K8sSim, a simulation tool for Kubernetes schedulers and its applications in scheduling algorithm optimization. Then we design and implement K8sSim, which incorporates typical Kubernetes and Volcano scheduling algorithms for both generic and AI workloads, and provides an accurate simulation of their scheduling process in real clusters. As a result, K8sSim can not only ensure the accuracy of scheduling results, but also greatly accelerate the scheduling time of different scheduling algorithms in the real cluster. Therefore, our proposed K8sSim can provide a convenient analysis tool and a basis for a series of research works on cluster scheduling optimization.
+K8sSim，是一种用于Kubernetes集群调度及其在调度算法优化方面的的仿真工具。该模拟器结合了通用负载和AI工作负载的典型Kubernetes调度算法和Volcano调度算法，并在实际集群中提供了对运行job和任务调度过程的准确模拟。它具有两个优点：（1）可以确保调度结果的准确性；（2）还可以大大加速实际群集中不同调度算法的调度运行时间。 因此，K8sSim可以为一系列有关集群计划优化的研究工作提供方便的分析工具和基础。
 
 # 2. K8sSim总体架构
 
