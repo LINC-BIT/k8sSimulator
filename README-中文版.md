@@ -148,17 +148,17 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
   }
   ```
 
-### 2.1.2 k8s-benchmark：Simulation environment
-* common/test_workloads: some generic workloads to test (user-submitted workloads, e.g. ce/ce-bra.yaml)
-* common/nodes: some configuration files of node resources (simulation nodes, c2e2.yaml)
-* common/summarizing: some formatted codes for the scheduling results of jobs and tasks, which is easy to analyze and use visually
-* run_sim_workload.py: ***the startup program used to submit the workload and node configuration*** 
-  * workload_dir: specifying the folder where the test workload is located
-  * sim_node_conf: specifying the simulation nodes for this test
-  * schedulers: specifying the names of the multiple Kubernetes scheduling algorithms to be run (e.g. bra, lrp, mrp)
-  * repeat_times: number of repeated runs
-  * sim_base_url: the port on which the simulation scheduler will run (**e.g. 'http://localhost:8002'**)
-  * result_dir: the location where the simulation results will be saved
+### 2.1.2 k8s-benchmark：仿真环境
+* common/test_workloads: 一些测试所用的通用负载(即用户提交的负载, e.g. ce/ce-bra.yaml)
+* common/nodes: 与真实集群中节点资源保持一致的模拟节点配置文件 (即仿真节点, c2e2.yaml)
+* common/summarizing: 一些对jobs和pods模拟调度的结果进行格式化的代码，以便于后续分析和使用
+* run_sim_workload.py: ***用来提交测试负载和模拟节点配置文件的启动程序*** 
+  * workload_dir: 指定本次测试使用负载的文件夹位置
+  * sim_node_conf: 指定本次测试使用的仿真节点配置
+  * schedulers: 指定本次测试所需对比的多种Kubernetes调度算法的名称 (e.g. bra, lrp, mrp)
+  * repeat_times: 指定测试的重复次数
+  * sim_base_url: 指定调度模拟器运行的端口(**e.g. 'http://localhost:8002'**)
+  * result_dir: 指定模拟结果存放的位置
 
 ### 2.1.3 部署和使用
 * 软件版本:
@@ -174,13 +174,13 @@ It is responsible for the scheduling of ***generic workloads*** in Kubernetes si
   * *6. python3.8 run_sim_workload.py*
 
 ## 2.2 Volcano模拟器
-It is responsible for the scheduling of ***AI workloads*** in Volcano simulation scheduler (For a AI workload, tasks in a job are executed concurrently by task-group)
+该模拟器负责在Volcano仿真调度器中执行AI工作负载（对于一个AI工作负载来说，作业中的任务通常是以task-group的形式并发执行的）
 ![image](volcano.png)
 
-### 2.2.1 Volcano_simulator：Volcano simualtion scheduler
-* cmd/sim: ***the startup program of Volcano simualtion scheduler*** 
-  * conf.go: port is used to specify the execution port of the simulation scheduler, **e.g. var port = ":8006"**
-  * pkg/scheduler/scheduler.go: function NewScheduler returns a new scheduler, and function loadSchedulerConf loads a new scheduler configuration
+### 2.2.1 Volcano_simulator：Volcano模拟调度器
+* cmd/sim: ***Volcano模拟调度器的启动程序*** 
+  * conf.go: 模拟调度器执行的端口, **e.g. var port = ":8006"**
+  * pkg/scheduler/scheduler.go: 函数NewScheduler被用来创建一个新的调度器, 函数loadSchedulerConf被用来装载一个新的调度器配置（即应用一个新的volcano调度算法到集群中）
   
   ```go
   
@@ -251,7 +251,7 @@ It is responsible for the scheduling of ***AI workloads*** in Volcano simulation
 ### 2.2.2 Submit_volcano_workloads：测试的仿真环境
 * common/workloads: 用来测试的一些AI负载(即用户提交的负载, e.g. AI-workloads/wsl_test_mrp-2.yaml)
 * common/nodes: 与真实集群中节点资源保持一致的模拟节点配置文件(即仿真节点，nodes_7-0.yaml)
-* SimRun.py: ***用来提交测试负载和模拟节点配置文件的开始程序*** 
+* SimRun.py: ***用来提交测试负载和模拟节点配置文件的启动程序*** 
   * sim_base_url: 调度模拟器运行的端口(**e.g. 'http://localhost:8006'**)
   * node_file_url: 指定本次测试所用的仿真节点
   * workload_file_url: 指定本次测试负载所在的文件夹位置
